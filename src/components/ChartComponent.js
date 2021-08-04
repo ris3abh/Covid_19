@@ -27,8 +27,8 @@ function RenderChart({data}){
             <YAxis />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+            <Line type="monotone" dataKey="pv" stroke="#05388b" activeDot={{ r: 8 }} />
+            <Line type="monotone" dataKey="uv" stroke="#FFA500" />
           </LineChart>
         </ResponsiveContainer>
       </div>
