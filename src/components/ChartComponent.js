@@ -96,10 +96,10 @@ const Chart = (props) => {
           </TabPane>
           <TabPane tabId="2">
             <Row>
-              <Col sm="8">
+              <Col sm="9">
                 <RenderChart data={death}/>
               </Col>
-              <Col sm="4" className="meta">
+              <Col sm="3" className="meta">
                 <h1>Deaths</h1>
                 <h1>170,108,198</h1>
               </Col>
@@ -107,10 +107,10 @@ const Chart = (props) => {
           </TabPane>
           <TabPane tabId="3">
             <Row>
-              <Col sm="8">
+              <Col sm="9">
                 <RenderChart data={confi}/>
               </Col>
-              <Col sm="4" className="meta">
+              <Col sm="3" className="meta">
                 <h1>Confirmed</h1>
                 <h1>170,108,198</h1>
               </Col>

@@ -42,6 +42,7 @@ address{
 .meta{
   margin: auto;
   font-family: 'Noto Serif';
+  font-size: 30px;
 }
 
 .tabname{
@@ -51,6 +52,8 @@ address{
   padding: 20px;
   margin-top: 10px;
   cursor: pointer;
+  font-size: 23px;
+  font-family: 'Noto Serif';
 }
 
 .font-loader {
