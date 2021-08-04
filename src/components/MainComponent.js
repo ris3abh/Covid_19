@@ -12,7 +12,7 @@ class Main extends Component {
   render() {
 
     return (
-      <div>
+      <div style = {{backgroundColor: '#fff'}}>
         <Router>
           <Header />
           <Switch>

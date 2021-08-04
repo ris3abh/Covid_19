@@ -5,8 +5,8 @@
 
 .row-content {
     margin:0px auto;
-    padding: 50px 0px 50px 0px;
-    border-bottom: 1px ridge;
+    padding: 70px 0px 50px 0px;
+    border-bottom: 5px ridge;
     min-height:400px;
 }
 
@@ -16,14 +16,20 @@
     padding: 20px 0px 20px 0px;
 }
 
+.nav-link{
+    color: #05288b;
+    font-size: 20px;
+}
+
 address{
     font-size:80%;
     margin:0px;
-    color:#0f0f0f;
+    color:#000;
 }
 
 .navbar-dark {
-    background-color: #512DA8;
+    background-color: #05288b;
+    color: #000;
 }
 
 
@@ -41,6 +47,22 @@ address{
 
 .meta{
   margin: auto;
+}
+
+
+.page{
+    helight: 100vh;
+    display: flex;
+    align-items:  center;
+    justify-content:  center;
+    background-color: #8ee4af;
+}
+
+.Container{
+    height: 500px;
+    width: 5000px;
+    border-radius: 20px;
+    border-color:  #fff;
 }
 
 .Heading{
@@ -78,11 +100,11 @@ address{
 }
 
 .tabname{
-  background-color: black;
-  color: floralwhite;
-  margin-top: 50px;
+  background-color: #5cdb95;
+  color: #05288b;
   padding: 20px;
-  margin-top: 10px;
+  border-radius: 40px;
+  margin-top: 20px;
   cursor: pointer;
   font-size: 23px;
   font-family: 'Noto Serif';
