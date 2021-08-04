@@ -50,10 +50,14 @@ const Chart = (props) => {
 
   return(
       <>
+        <div>
+          <h1 className="font-loader">Prediction Curves</h1>
+        </div>
         <Nav fill>
           <NavItem>
             <NavLink
               onClick={() => { toggle('1'); }}
+              className="tabname"
             >
               Recovered
             </NavLink>
@@ -61,6 +65,7 @@ const Chart = (props) => {
           <NavItem>
             <NavLink
               onClick={() => { toggle('2'); }}
+              className="tabname"
             >
               Death
             </NavLink>
@@ -68,6 +73,7 @@ const Chart = (props) => {
           <NavItem>
             <NavLink
               onClick={() => { toggle('3'); }}
+              className="tabname"
             >
               Confirmed
             </NavLink>
