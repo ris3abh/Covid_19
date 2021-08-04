@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, UncontrolledTooltip} from 'reactstrap';
 import '../App.css';
 import {DEATHS} from '../shared/deaths.js';
 import {RECOVERED} from '../shared/recovered.js';
@@ -50,10 +50,17 @@ const Chart = (props) => {
 
   return(
       <>
+        <div>
+          <h1 className="font-loader"><span href="#" id="tt">Prediction Curves</span></h1>
+          <UncontrolledTooltip placement="right" target="tt">
+            LSTM Time Series Forecasting
+          </UncontrolledTooltip>
+        </div>
         <Nav fill>
           <NavItem>
             <NavLink
               onClick={() => { toggle('1'); }}
+              className="tabname"
             >
               Recovered
             </NavLink>
@@ -61,6 +68,7 @@ const Chart = (props) => {
           <NavItem>
             <NavLink
               onClick={() => { toggle('2'); }}
+              className="tabname"
             >
               Death
             </NavLink>
@@ -68,6 +76,7 @@ const Chart = (props) => {
           <NavItem>
             <NavLink
               onClick={() => { toggle('3'); }}
+              className="tabname"
             >
               Confirmed
             </NavLink>
@@ -76,33 +85,33 @@ const Chart = (props) => {
         <TabContent activeTab={activeTab}>
           <TabPane tabId="1">
             <Row>
-              <Col sm="8">
+              <Col sm="9">
                 <RenderChart data={recov}/>
               </Col>
-              <Col sm="4" className="meta">
-                <h1><b>Recovered:</b></h1>
+              <Col sm="3" className="meta">
+                <h1>Recovered</h1>
                 <h1>170,108,198</h1>
               </Col>
             </Row>
           </TabPane>
           <TabPane tabId="2">
             <Row>
-              <Col sm="8">
+              <Col sm="9">
                 <RenderChart data={death}/>
               </Col>
-              <Col sm="4" className="meta">
-                <h1><b>Deaths:</b></h1>
+              <Col sm="3" className="meta">
+                <h1>Deaths</h1>
                 <h1>170,108,198</h1>
               </Col>
             </Row>
           </TabPane>
           <TabPane tabId="3">
             <Row>
-              <Col sm="8">
+              <Col sm="9">
                 <RenderChart data={confi}/>
               </Col>
-              <Col sm="4" className="meta">
-                <h1><b>Confirmed:</b></h1>
+              <Col sm="3" className="meta">
+                <h1>Confirmed</h1>
                 <h1>170,108,198</h1>
               </Col>
             </Row>

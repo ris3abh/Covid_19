@@ -1,6 +1,17 @@
+import {useEffect} from 'react';
 import Main from './components/MainComponent';
+import WebFont from 'webfontloader';
 
 function App() {
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Playfair Display', 'Noto Serif']
+      }
+    });
+  }, []);
+
   return (
     <div className="App">
       <Main/>

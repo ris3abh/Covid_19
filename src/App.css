@@ -28,10 +28,10 @@ address{
 
 
 .question {
-  width: 600px;
-  height: 500px;
+  width: 750px;
+  height: 550px;
   padding-top: 50px;
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
 .question-container {
@@ -87,4 +87,25 @@ address{
     color: #fff;
     text-align: center;
     background-color: #000;
+    font-family: 'Noto Serif';
+    font-size: 30px;
+}
+
+.tabname{
+  background-color: black;
+  color: floralwhite;
+  margin-top: 50px;
+  padding: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 23px;
+  font-family: 'Noto Serif';
+}
+
+.font-loader {
+  font-family: 'Playfair Display';
+  font-weight: 570;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0 px;
 }
