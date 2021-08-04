@@ -42,3 +42,49 @@ address{
 .meta{
   margin: auto;
 }
+
+.page{
+    helight: 100vh;
+    display: flex;
+    align-items:  center;
+    justify-content:  center;
+    background-color: #d2d2dc;
+}
+
+.Container{
+    height: 500px;
+    width: 5000px;
+    border-radius: 20px;
+    border-color:  #fff;
+}
+
+.Heading{
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+}
+
+.img{
+    border-radius: 30px;
+}
+
+.input-style{
+    align-items: center;
+    justify-content: center;
+    background-color: #d2d2dc;
+    text-align: center;
+    color: #000;
+    border-color: #000;
+}
+
+.button-label{
+    border-color: none;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+}
