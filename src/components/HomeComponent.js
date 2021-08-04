@@ -1,11 +1,10 @@
 import React from 'react';
+import Chart from './ChartComponent';
 
 function Home(props) {
     return(
       	<div className="container">
-      		<div className="row align-items-start">
-            <p class="text-center">Home Page</p>
-      		</div>
+      		<Chart/>
       	</div>
     );
 }
