@@ -28,10 +28,10 @@ address{
 
 
 .question {
-  width: 600px;
-  height: 500px;
+  width: 750px;
+  height: 550px;
   padding-top: 50px;
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
 .question-container {
@@ -41,6 +41,7 @@ address{
 
 .meta{
   margin: auto;
+  font-family: 'Noto Serif';
 }
 
 .tabname{
@@ -54,6 +55,7 @@ address{
 
 .font-loader {
   font-family: 'Playfair Display';
+  font-weight: 570;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 0 px;

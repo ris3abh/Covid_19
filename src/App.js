@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Playfair Display', 'Chilanka']
+        families: ['Playfair Display', 'Noto Serif']
       }
     });
   }, []);
