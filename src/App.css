@@ -90,8 +90,8 @@ address{
 
 .button-label{
     border-radius: 30px;
-    outline: 'none';
-    border-color: floralwhite;
+    outline: none;
+    border: none;
     text-align: center;
     background-color: #5cdb95;
     font-family: 'Noto Serif';
