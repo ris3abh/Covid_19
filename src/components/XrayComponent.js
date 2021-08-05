@@ -28,7 +28,7 @@ class Xray extends Component {
             <img src={this.state.image} alt="upload image here" className = "img"/>
             <div class = "input-style">
               <input type="file" name = "image-upload" id = "input" accept = "image/*" onChange={this.handleChange}/>
-              <button className = "button-label" onClick={this.handleSubmit}>Diagnose</button>
+              <button className = "button-label" onClick={this.handleSubmit} style={{color: "#05288b"}}>Diagnose</button>
             </div>
           </Col>
         </Row>  

@@ -77,26 +77,27 @@ address{
     margin: 20px;
     border-radius: 30px;
     width: 700px;
-    width: 700px;
+    height: 450px;
 }
 
 .input-style{
     align-items: center;
     padding: 10px;
+    outline: 'none';
     justify-content: center;
     text-align: center;
-    color: #000;
-    border-color: #000;
 }
 
 .button-label{
-    border-color: none;
     border-radius: 30px;
-    color: #fff;
+    outline: 'none';
+    border-color: floralwhite;
     text-align: center;
-    background-color: #000;
+    background-color: #5cdb95;
     font-family: 'Noto Serif';
     font-size: 25px;
+    margin-bottom: 50px;
+    padding: 10px;
 }
 
 .tabname{
