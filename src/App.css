@@ -49,6 +49,15 @@ address{
   margin: auto;
 }
 
+
+.page{
+    helight: 100vh;
+    display: flex;
+    align-items:  center;
+    justify-content:  center;
+    background-color: #8ee4af;
+}
+
 .Container{
     height: 500px;
     width: 5000px;
