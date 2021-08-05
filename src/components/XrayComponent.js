@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {Col, Row} from 'reactstrap';
 import '../App.css';
 import lungs from '../lungs.jpg'
+
 
 class Xray extends Component {
   constructor(props) {
