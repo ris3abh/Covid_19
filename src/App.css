@@ -1,41 +1,46 @@
-.main {
-    background: #fff;
+:root::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-.row-header{
-    margin:0px auto;
-    padding:0px auto;
+.main {
+  background: #fff;
+}
+
+.row-header {
+  margin: 0px auto;
+  padding: 0px auto;
 }
 
 .row-content {
-    margin:0px auto;
-    padding: 70px 0px 50px 0px;
-    border-bottom: 5px ridge;
-    min-height:400px;
+  margin: 0px auto;
+  padding: 70px 0px 50px 0px;
+  border-bottom: 5px ridge;
+  min-height: 400px;
 }
 
-.footer{
-    background-color: #D1C4E9;
-    margin:0px auto;
-    padding: 20px 0px 20px 0px;
+.footer {
+  background-color: #d1c4e9;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
 }
 
-.nav-link{
-    color: #05288b;
-    font-size: 20px;
+.nav-link {
+  color: #05288b;
+  font-size: 20px;
 }
 
-address{
-    font-size:80%;
-    margin:0px;
-    color:#000;
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #000;
 }
 
 .navbar-dark {
-    background-color: #05288b;
-    color: #000;
+  background-color: #05288b;
+  color: #000;
 }
-
 
 .question {
   width: 750px;
@@ -49,85 +54,85 @@ address{
   height: 100%;
 }
 
-.meta{
+.meta {
   margin: auto;
 }
 
-
-.page{
-    height: 100vh;
-    display: flex;
-    align-items:  center;
-    justify-content:  center;
-    background-color: #8ee4af;
+.page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8ee4af;
 }
 
-.Container{
-    height: 200px;
-    width: 5000px;
-    border-radius: 20px;
-    border-color:  #fff;
+.container {
+  margin: 50px auto;
+  height: 200px;
+  width: 5000px;
+  border-radius: 20px;
+  border-color: #fff;
 }
 
-.Heading{
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    font-weight: 500;
+.img {
+  margin: 20px;
+  border-radius: 30px;
+  width: 700px;
+  height: 450px;
 }
 
-.img{
-    margin: 20px;
-    border-radius: 30px;
-    width: 700px;
-    height: 450px;
+.input-style {
+  align-items: center;
+  padding: 10px;
+  outline: "none";
+  justify-content: center;
+  text-align: center;
 }
 
-.input-style{
-    align-items: center;
-    padding: 10px;
-    outline: 'none';
-    justify-content: center;
-    text-align: center;
-}
-
-.button-label{
-    border-radius: 30px;
-    color: #05288b;
-    border: none;
-    text-align: center;
-    background-color: #5cdb95;
-    font-family: 'Noto Sans';
-    font-size: 20px;
-    margin: 50px;
-    padding: 10px;
-    width: 150px;
+.button-label {
+  border-radius: 30px;
+  color: #05288b;
+  border: none;
+  text-align: center;
+  background-color: #5cdb95;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  margin: 50px;
+  padding: 10px;
+  width: 150px;
 }
 
 /* Recovered Death Confirmed */
 .pill-items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.tabname{
+.tabname {
   background-color: #5cdb95;
   width: 180px;
   text-align: center;
   color: #05288b;
-  padding: 20px;
+  padding: 10px;
   border-radius: 40px;
   margin: 20px 30px;
   cursor: pointer;
-  font-size: 23px;
-  font-family: 'Noto Sans';
+  font-size: 18px;
+  font-family: "Noto Sans";
   font-weight: 600;
 }
 
+.tabname:hover {
+    box-shadow: -1px 7px 14px -3px rgba(0,0,0,0.1);
+}
+
+.tabname:active {
+    box-shadow: -1px 7px 14px -1px rgba(0,0,0,0.21);
+}
+
 .font-loader {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 700;
   font-stretch: wider;
   font-size: 50px;
@@ -137,9 +142,13 @@ address{
 }
 
 .prediction-card {
-    background: #fff;
-    border: 2px solid black;
-    padding: 15px;
-    border-radius: 20px;
-    text-align: center;
+  background: #fff;
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.nav-collapse {
+  margin-left: 15px;
 }
