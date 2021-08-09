@@ -1,3 +1,7 @@
+.main {
+    background: #fff;
+}
+
 .row-header{
     margin:0px auto;
     padding:0px auto;
@@ -51,7 +55,7 @@ address{
 
 
 .page{
-    helight: 100vh;
+    height: 100vh;
     display: flex;
     align-items:  center;
     justify-content:  center;
@@ -59,7 +63,7 @@ address{
 }
 
 .Container{
-    height: 500px;
+    height: 200px;
     width: 5000px;
     border-radius: 20px;
     border-color:  #fff;
@@ -90,31 +94,52 @@ address{
 
 .button-label{
     border-radius: 30px;
-    outline: none;
+    color: #05288b;
     border: none;
     text-align: center;
     background-color: #5cdb95;
-    font-family: 'Noto Serif';
-    font-size: 25px;
-    margin-bottom: 50px;
+    font-family: 'Noto Sans';
+    font-size: 20px;
+    margin: 50px;
     padding: 10px;
+    width: 150px;
+}
+
+/* Recovered Death Confirmed */
+.pill-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tabname{
   background-color: #5cdb95;
+  width: 180px;
+  text-align: center;
   color: #05288b;
   padding: 20px;
   border-radius: 40px;
-  margin-top: 20px;
+  margin: 20px 30px;
   cursor: pointer;
   font-size: 23px;
-  font-family: 'Noto Serif';
+  font-family: 'Noto Sans';
+  font-weight: 600;
 }
 
 .font-loader {
-  font-family: 'Playfair Display';
-  font-weight: 570;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-stretch: wider;
+  font-size: 50px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 0 px;
+}
+
+.prediction-card {
+    background: #fff;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
 }
