@@ -1,7 +1,7 @@
 import React from 'react';
 import Chart from './ChartComponent';
 
-function Home(props) {
+function Home() {
     return(
       	<div className="container">
       		<Chart/>

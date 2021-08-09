@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Playfair Display', 'Noto Serif']
+        families: ['Playfair Display', 'Noto Serif', 'Noto Sans', 'Montserrat', 'Roboto']
       }
     });
   }, []);
