@@ -65,16 +65,6 @@ const XRay = () => {
         <Col sm="6">
           {dataURL && (<img src={dataURL} alt="Uploaded XRay" className="img" />)}
           <div class="input-style">
-            {/* <input
-              type="file"
-              name="image-upload"
-              id="input"
-              inputContent="Drop your x-ray file"
-              accept="image/*"
-              onChange={(event) => setDataUri(event)}
-            /> */}
-
-            {/* File Upload */}
             <MyUploader />
 
             <Button
@@ -82,15 +72,6 @@ const XRay = () => {
               onClick={() => handleImage(dataURL)}
             >
               Diagnose
-            </Button>
-
-            {/* Testing image in console */}
-            <Button color="secondary" onClick={showImageEvent}>
-              Image URL
-            </Button>
-
-            <Button color="primary" onClick={showPrediction}>
-              Show Prediction
             </Button>
           </div>
         </Col>
