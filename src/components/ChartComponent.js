@@ -28,7 +28,7 @@ function RenderChart({ data }) {
   return (
     <div className="question">
       <div className="question-container">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer>
           <LineChart
             width={500}
             height={300}
