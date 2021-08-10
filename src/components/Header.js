@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import Logo from "../assets/coronavirus-logo.png";
 
-const Header = (props) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -19,7 +19,7 @@ const Header = (props) => {
     <div>
       <Navbar color="dark" dark expand="md">
         <NavbarBrand href="/" style={{ marginLeft: "20px" }}>
-          <img src={Logo} alt="logo" width="40px" />
+          <img src={Logo} alt="logo" width="40px" />{' Covidiction'}
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="nav-collapse">
