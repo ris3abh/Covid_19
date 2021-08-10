@@ -5,10 +5,13 @@ import { imgWidth, imgHeight } from "../shared/config.js";
 import "../App.css";
 import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
+import lungs from '../lungs.jpg'
+
 
 const XRay = () => {
-  const [dataURL, setDataURL] = useState("");
-  const [prediction, setPrediction] = useState(0);
+  const [dataURL, setDataURL] = useState(lungs);
+  const [prediction, setPrediction] = useState();
+  const [msg,setMsg] = useState('');
 
   // it takes the image and pass it through the model to give prediction
   async function handleImage(dataURL) {
@@ -30,9 +33,18 @@ const XRay = () => {
       .data()
       .then((res) => {
         setPrediction(res);
+        handleMsg(res);
       });
     console.log(tensorImg);
   }
+
+  const handleMsg = (prediction) => {
+    if (prediction == 0)
+      setMsg('The model suggests you maybe covid positive')
+    else if (prediction == 1)
+      setMsg('The model suggests you are covid negative')    
+  } 
+
 
   // Testing functions
   const showImageEvent = () => {
@@ -75,19 +87,14 @@ const XRay = () => {
             </Button>
           </div>
         </Col>
-
-        {prediction && (
-          <Col sm="6">
-            <div className="prediction-card">
-              <div className="font-loader">
-                <h3>Your X-ray shows your Covid Status is: </h3>
-              </div>
-              <div className="font-loader">
-                <h3>Predicted: {prediction} </h3>
-              </div>
+          <Col sm="6" className="font-loader" style={{marginTop:'150px'}}>
+            <div style={{marginBottom:'20px'}}>
+              <h3>Your X-ray shows your Covid Status as </h3>
+            </div>
+            <div style={{marginLeft: '60px'}}> 
+              <h3>{msg || "-"} </h3>
             </div>
           </Col>
-        )}
       </Row>
     </div>
   );

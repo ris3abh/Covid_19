@@ -132,7 +132,7 @@ address {
 }
 
 .font-loader {
-  font-family: "Noto Sans";
+  font-family: "Playfair Display";
   font-weight: 700;
   font-stretch: wider;
   font-size: 50px;
@@ -143,12 +143,13 @@ address {
 
 .prediction-card {
   background: #fff;
-  border: 2px solid black;
-  padding: 15px;
-  border-radius: 20px;
   text-align: center;
 }
 
 .nav-collapse {
   margin-left: 15px;
+}
+
+.display-linebreak {
+  white-space: pre;
 }

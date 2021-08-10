@@ -19,7 +19,7 @@ const Header = (props) => {
     <div>
       <Navbar color="dark" dark expand="md">
         <NavbarBrand href="/" style={{ marginLeft: "20px" }}>
-          <img src={Logo} alt="logo" width="40px" />{' Covidiction'}
+          <img src={Logo} alt="logo" width="40px" />
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="nav-collapse">
