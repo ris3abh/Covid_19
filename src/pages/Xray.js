@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Button, NavLink } from "reactstrap";
+import { NavLink } from "reactstrap";
 import * as tf from "@tensorflow/tfjs";
 import { imgWidth, imgHeight } from "../shared/config.js";
 import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
-import lungs from "../lungs.jpg";
+import lungs from "../assets/lungs.jpg";
 
 const XRay = () => {
   const [dataURL, setDataURL] = useState(lungs);
