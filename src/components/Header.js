@@ -8,7 +8,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import Logo from "../assets/coronavirus-256px.png";
+import Logo from "../assets/coronavirus-logo.png";
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
