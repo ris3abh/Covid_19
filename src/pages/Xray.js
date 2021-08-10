@@ -2,16 +2,14 @@ import { useState } from "react";
 import { Button, Col, Row } from "reactstrap";
 import * as tf from "@tensorflow/tfjs";
 import { imgWidth, imgHeight } from "../shared/config.js";
-import "../App.css";
 import "react-dropzone-uploader/dist/styles.css";
 import Dropzone from "react-dropzone-uploader";
-import lungs from '../lungs.jpg'
-
+import lungs from "../lungs.jpg";
 
 const XRay = () => {
   const [dataURL, setDataURL] = useState(lungs);
-  const [prediction, setPrediction] = useState();
-  const [msg,setMsg] = useState('');
+  // const [prediction, setPrediction] = useState();
+  const [msg, setMsg] = useState(undefined);
 
   // it takes the image and pass it through the model to give prediction
   async function handleImage(dataURL) {
@@ -27,32 +25,20 @@ const XRay = () => {
       .resizeNearestNeighbor([imgWidth, imgHeight])
       .toFloat()
       .expandDims();
-    
+
     model
       .predict(tensorImg)
       .data()
       .then((res) => {
-        setPrediction(res);
-        handleMsg(res);
+        handleMsg(res[0]);
       });
-    console.log(tensorImg);
   }
 
+  // Message instead of giving away number
   const handleMsg = (prediction) => {
-    if (prediction == 0)
-      setMsg('The model suggests you maybe covid positive')
-    else if (prediction == 1)
-      setMsg('The model suggests you are covid negative')    
-  } 
-
-
-  // Testing functions
-  const showImageEvent = () => {
-    console.log(dataURL);
-  };
-
-  const showPrediction = () => {
-    console.log(`Prediction result: ${prediction}`);
+    if (prediction === 0) setMsg("the model suggests you maybe Covid positive");
+    else if (prediction === 1)
+      setMsg("the model suggests you are Covid negative");
   };
 
   // Uploader Component
@@ -61,6 +47,7 @@ const XRay = () => {
     const handleSubmit = (files) => {
       const file = files.map((f) => f.meta);
       const imageURL = file[0].previewUrl;
+      console.log(imageURL);
       setDataURL(imageURL);
     };
 
@@ -70,15 +57,20 @@ const XRay = () => {
   return (
     <div className="container">
       <h1 className="font-loader">X-ray Prediction</h1>
-      <h2 style={{ fontFamily: "Noto Serif", textAlign: "center" }}>
+      <h2
+        style={{
+          fontFamily: "Noto Sans",
+          fontWeight: "500",
+          textAlign: "center",
+        }}
+      >
         Check if your x-ray shows traces of covid
       </h2>
       <Row>
         <Col sm="6">
-          {dataURL && (<img src={dataURL} alt="Uploaded XRay" className="img" />)}
+          {dataURL && <img src={dataURL} alt="Uploaded XRay" className="img" />}
           <div class="input-style">
             <MyUploader />
-
             <Button
               className="button-label"
               onClick={() => handleImage(dataURL)}
@@ -87,17 +79,14 @@ const XRay = () => {
             </Button>
           </div>
         </Col>
-          <Col sm="6" className="font-loader" style={{marginTop:'150px'}}>
-            <div style={{marginBottom:'20px'}}>
-              <h3>Your X-ray shows your Covid Status as </h3>
-            </div>
-            <div style={{marginLeft: '60px'}}> 
-              <h3>{msg || "-"} </h3>
-            </div>
-          </Col>
+        <Col sm="6" className="font-loader" style={{ marginTop: "150px" }}>
+          <div style={{ marginLeft: "60px" }}>
+            {msg && <h3>Your X-ray shows your Covid Status as {msg}</h3>}
+          </div>
+        </Col>
       </Row>
     </div>
   );
-}
+};
 
 export default XRay;
