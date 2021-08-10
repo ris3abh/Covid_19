@@ -1,20 +1,34 @@
-import {useEffect} from 'react';
-import Main from './components/MainComponent';
-import WebFont from 'webfontloader';
+import { useEffect } from "react";
+import WebFont from "webfontloader";
+import Home from "./pages/Home";
+import Xray from "./pages/Xray";
+import Header from "./components/Header";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 function App() {
-
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Playfair Display', 'Noto Serif', 'Noto Sans', 'Montserrat', 'Roboto']
-      }
+        families: ["Noto Sans", "Roboto"],
+      },
     });
   }, []);
 
   return (
-    <div className="App">
-      <Main/>
+    <div className="App main">
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/home" component={() => <Home />} />
+          <Route path="/xray" component={() => <Xray />} />
+          <Redirect to="/home" />
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,14 +1,5 @@
-import React, { useState } from "react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import { useState } from "react";
+import Chart from "../components/Chart";
 import {
   TabContent,
   TabPane,
@@ -19,47 +10,13 @@ import {
   Col,
   UncontrolledTooltip,
 } from "reactstrap";
-import "../App.css";
+
+// importing data
 import { DEATHS } from "../shared/deaths.js";
 import { RECOVERED } from "../shared/recovered.js";
 import { CONFIRMED } from "../shared/confirmed.js";
 
-function RenderChart({ data }) {
-  return (
-    <div className="question">
-      <div className="question-container">
-        <ResponsiveContainer>
-          <LineChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey="pv"
-              stroke="#05388b"
-              activeDot={{ r: 8 }}
-            />
-            <Line type="monotone" dataKey="uv" stroke="#FFA500" />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
-    </div>
-  );
-}
-
-const Chart = (props) => {
+const Home = () => {
   const [activeTab, setActiveTab] = useState("1");
   const death = DEATHS;
   const recov = RECOVERED;
@@ -70,7 +27,7 @@ const Chart = (props) => {
   };
 
   return (
-    <>
+    <div className="container">
       <div>
         <h1 className="font-loader">
           <span href="#" id="tt">
@@ -118,7 +75,7 @@ const Chart = (props) => {
         <TabPane tabId="1">
           <Row>
             <Col sm="9">
-              <RenderChart data={recov} />
+              <Chart data={recov} />
             </Col>
             <Col sm="3" className="meta">
               <h1>Recovered</h1>
@@ -129,7 +86,7 @@ const Chart = (props) => {
         <TabPane tabId="2">
           <Row>
             <Col sm="9">
-              <RenderChart data={death} />
+              <Chart data={death} />
             </Col>
             <Col sm="3" className="meta">
               <h1>Deaths</h1>
@@ -140,7 +97,7 @@ const Chart = (props) => {
         <TabPane tabId="3">
           <Row>
             <Col sm="9">
-              <RenderChart data={confi} />
+              <Chart data={confi} />
             </Col>
             <Col sm="3" className="meta">
               <h1>Confirmed</h1>
@@ -149,8 +106,8 @@ const Chart = (props) => {
           </Row>
         </TabPane>
       </TabContent>
-    </>
+    </div>
   );
 };
 
-export default Chart;
+export default Home;
