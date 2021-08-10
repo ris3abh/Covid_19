@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Col, Row } from "reactstrap";
+import { Button, NavLink } from "reactstrap";
 import * as tf from "@tensorflow/tfjs";
 import { imgWidth, imgHeight } from "../shared/config.js";
 import "react-dropzone-uploader/dist/styles.css";
@@ -36,9 +36,9 @@ const XRay = () => {
 
   // Message instead of giving away number
   const handleMsg = (prediction) => {
-    if (prediction === 0) setMsg("the model suggests you maybe Covid positive");
+    if (prediction === 0) setMsg("Caution: According to your x-ray you're Covid Positive!");
     else if (prediction === 1)
-      setMsg("the model suggests you are Covid negative");
+      setMsg("Don't worry, According to your x-ray you're covid negative.");
   };
 
   // Uploader Component
@@ -56,35 +56,25 @@ const XRay = () => {
 
   return (
     <div className="container">
-      <h1 className="font-loader">X-ray Prediction</h1>
-      <h2
-        style={{
-          fontFamily: "Noto Sans",
-          fontWeight: "500",
-          textAlign: "center",
-        }}
-      >
-        Check if your x-ray shows traces of covid
-      </h2>
-      <Row>
-        <Col sm="6">
-          {dataURL && <img src={dataURL} alt="Uploaded XRay" className="img" />}
-          <div class="input-style">
-            <MyUploader />
-            <Button
-              className="button-label"
-              onClick={() => handleImage(dataURL)}
-            >
-              Diagnose
-            </Button>
-          </div>
-        </Col>
-        <Col sm="6" className="font-loader" style={{ marginTop: "150px" }}>
-          <div style={{ marginLeft: "60px" }}>
-            {msg && <h3>Your X-ray shows your Covid Status as {msg}</h3>}
-          </div>
-        </Col>
-      </Row>
+      <div className="heading">
+        <h1 className="font-loader">X-ray Prediction</h1>
+        <h2 className="sub-heading">
+          Check if your x-ray shows traces of covid
+        </h2>
+      </div>
+
+      <div className="xray-content">
+        <img src={dataURL} alt="Uploaded XRay" className="img" />
+        <div className="pred">
+          {msg && <h3 className="pred-heading">{msg}</h3>}
+        </div>
+        <div class="input-style">
+          <MyUploader />
+          <NavLink className="tabname" onClick={() => handleImage(dataURL)}>
+            Diagnose
+          </NavLink>
+        </div>
+      </div>
     </div>
   );
 };

@@ -34,7 +34,7 @@ const Home = () => {
             Prediction Curves
           </span>
         </h1>
-        <UncontrolledTooltip placement="right" target="tt">
+        <UncontrolledTooltip placement="right-end" target="tt">
           LSTM Time Series Forecasting
         </UncontrolledTooltip>
       </div>
@@ -78,7 +78,7 @@ const Home = () => {
               <Chart data={recov} />
             </Col>
             <Col sm="3" className="meta">
-              <h1>Recovered</h1>
+              <h2>Recovered</h2>
               <h1>170,108,198</h1>
             </Col>
           </Row>
