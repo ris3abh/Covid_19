@@ -105,10 +105,14 @@ address {
   padding: 10px;
   border-radius: 40px;
   border: none;
-  margin: auto 30px;
+  margin: 10px 30px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 600;
+}
+
+.xray-button {
+  margin: auto 30px;
 }
 
 .tabname:hover {

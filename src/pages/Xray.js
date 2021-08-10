@@ -70,7 +70,7 @@ const XRay = () => {
         </div>
         <div class="input-style">
           <MyUploader />
-          <NavLink className="tabname" onClick={() => handleImage(dataURL)}>
+          <NavLink className="tabname xray-button" onClick={() => handleImage(dataURL)}>
             Diagnose
           </NavLink>
         </div>
