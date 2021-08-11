@@ -1,44 +1,36 @@
 export const CONFIRMED = [
   {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    name: "2021-07-23",
+    confirmed: 31293062,
+    predicted: 32452712.69919896
   },
   {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    name: "",
+    confirmed: 31695958,
+    predicted: 33817801.561368704
   },
   {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    name: "2021-08-15",
+    predicted: 35536527.1283977
   },
   {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    name: "",
+    predicted: 36137181.29866409
   },
   {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
+    name: "2021-09-01",
+    predicted: 36457673.189047575
   },
   {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
+    name: "",
+    predicted: 36487833.66457224
   },
   {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    name: "",
+    predicted: 36516434.82299495
   },
-];
+  {
+    name: "2021-09-04",
+    predicted: 36543577.3857553
+  }
+]

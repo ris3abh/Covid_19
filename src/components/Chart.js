@@ -11,7 +11,7 @@ import {
 
 import "../App.css";
 
-function Chart({ data }) {
+function Chart({ data, curvename}) {
   return (
     <div className="question">
       <div className="question-container">
@@ -34,11 +34,11 @@ function Chart({ data }) {
             <Legend />
             <Line
               type="monotone"
-              dataKey="pv"
+              dataKey={curvename}
               stroke="#05388b"
               activeDot={{ r: 8 }}
             />
-            <Line type="monotone" dataKey="uv" stroke="#FFA500" />
+            <Line type="monotone" dataKey="predicted" stroke="#FFA500" />
           </LineChart>
         </ResponsiveContainer>
       </div>

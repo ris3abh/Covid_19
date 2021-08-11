@@ -75,7 +75,7 @@ const Home = () => {
         <TabPane tabId="1">
           <Row>
             <Col sm="9">
-              <Chart data={recov} />
+              <Chart data={recov} curvename={"recovered"} />
             </Col>
             <Col sm="3" className="meta">
               <h2>Recovered</h2>
@@ -86,7 +86,7 @@ const Home = () => {
         <TabPane tabId="2">
           <Row>
             <Col sm="9">
-              <Chart data={death} />
+              <Chart data={death} curvename= {"deaths"} />
             </Col>
             <Col sm="3" className="meta">
               <h1>Deaths</h1>
@@ -97,7 +97,7 @@ const Home = () => {
         <TabPane tabId="3">
           <Row>
             <Col sm="9">
-              <Chart data={confi} />
+              <Chart data={confi} curvename={"confirmed"} />
             </Col>
             <Col sm="3" className="meta">
               <h1>Confirmed</h1>
