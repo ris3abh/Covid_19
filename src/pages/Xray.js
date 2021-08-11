@@ -63,7 +63,8 @@ const XRay = () => {
         </h2>
       </div>
       <div className="xray-content">
-        <img src={dataURL} alt="Uploaded XRay" className="img" />
+
+        <img src={dataURL} alt="Uploaded XRay" className={dataURL === lungs ? "img" : "xrayImg"} />
         <div className="pred">
           {msg && <h3 className="pred-heading">{msg}</h3>}
         </div>

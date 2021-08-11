@@ -83,6 +83,13 @@ address {
   height: 450px;
 }
 
+.xrayImg {
+  margin: 20px;
+  border-radius: 15px;
+  width: 700px;
+  height: 450px;
+}
+
 .input-style {
   display: flex;
   flex-direction: row;

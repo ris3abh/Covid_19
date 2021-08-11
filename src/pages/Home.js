@@ -89,7 +89,7 @@ const Home = () => {
               <Chart data={death} curvename= {"deaths"} />
             </Col>
             <Col sm="3" className="meta">
-              <h1>Deaths</h1>
+              <h2>Deaths</h2>
               <h1>170,108,198</h1>
             </Col>
           </Row>
@@ -100,7 +100,7 @@ const Home = () => {
               <Chart data={confi} curvename={"confirmed"} />
             </Col>
             <Col sm="3" className="meta">
-              <h1>Confirmed</h1>
+              <h2>Confirmed</h2>
               <h1>170,108,198</h1>
             </Col>
           </Row>
