@@ -36,9 +36,9 @@ const XRay = () => {
 
   // Message instead of giving away number
   const handleMsg = (prediction) => {
-    if (prediction === 0) setMsg("Caution: According to your x-ray you're Covid Positive!");
+    if (prediction === 0) setMsg("Don't worry, According to your x-ray you're covid negative.");
     else if (prediction === 1)
-      setMsg("Don't worry, According to your x-ray you're covid negative.");
+      setMsg("Caution: According to your x-ray you're Covid Positive!");
   };
 
   // Uploader Component
@@ -62,7 +62,6 @@ const XRay = () => {
           Check if your x-ray shows traces of covid
         </h2>
       </div>
-
       <div className="xray-content">
         <img src={dataURL} alt="Uploaded XRay" className="img" />
         <div className="pred">
