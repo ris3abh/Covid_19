@@ -79,7 +79,7 @@ const Home = () => {
             </Col>
             <Col sm="3" className="meta">
               <h2>Recovered</h2>
-              <h1>170,108,198</h1>
+              <h1>184,234,574</h1>
             </Col>
           </Row>
         </TabPane>
@@ -90,7 +90,7 @@ const Home = () => {
             </Col>
             <Col sm="3" className="meta">
               <h2>Deaths</h2>
-              <h1>170,108,198</h1>
+              <h1>4,333,167</h1>
             </Col>
           </Row>
         </TabPane>
@@ -101,7 +101,7 @@ const Home = () => {
             </Col>
             <Col sm="3" className="meta">
               <h2>Confirmed</h2>
-              <h1>170,108,198</h1>
+              <h1>205,150,843</h1>
             </Col>
           </Row>
         </TabPane>
